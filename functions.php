@@ -18,12 +18,10 @@
         // jQuery Add 
         wp_enqueue_script('jQuery');
         wp_enqueue_script('bootstrap',get_template_directory_uri().'/js/bootstrap.bundle.min.js',array(),'v5.0.2','true');
-        wp_enqueue_script('bootstrap',get_template_directory_uri().'/js/main.js',array(),'1.0.0','true');
+        wp_enqueue_script('main_js',get_template_directory_uri().'/js/main.js',array(),'1.0.0','true');
 
     }
     add_action("wp_enqueue_scripts","themes_css_js_calling");
 
 ?>
-<!-- print option : print  -->
-<!-- mobile varsion : screen-->
-<!-- All devise : All -->
+<!-- ======  4 Start =============== -->
