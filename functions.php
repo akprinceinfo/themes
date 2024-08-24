@@ -23,6 +23,12 @@
     }
     add_action("wp_enqueue_scripts","themes_css_js_calling");
 
+    // Google Font Enqueue
+    function theme_fontsAdd(){
+        wp_enqueue_style('theme_google_fonts','https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap',false);
+    }
+    add_action("wp_enqueue_scripts","theme_fontsAdd");
+
 
     // Theme Function 
 
@@ -45,5 +51,6 @@
     add_action('customize_register','theme_cusomizer_regester');
 
 
-
-    
+    // Menu Register
+    register_nav_menu('mani_menu',__('Main Menu','themeTextDomain'));
+  
