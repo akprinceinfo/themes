@@ -19,7 +19,7 @@
 <body <?php body_class(); ?>>
     
     
-    <div id="header_area">
+    <div id="header_area" class="<?php echo get_theme_mod('theme_Menu_position'); ?>">
         <div class="container">
             <div class="row">
                 <!-- logo area  -->

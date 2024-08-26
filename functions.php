@@ -32,9 +32,10 @@
 
     // Theme Function 
 
-    // Logo Add
 
+    // Logo Add
     function theme_cusomizer_regester($wp_customize){
+        // Header area function
         $wp_customize->add_section('theme_header_area',array(
             'title' => __('Header Area','themeTextDomain'),
             'description'=> 'If you interested to update your header area, You can do it hear'
@@ -47,6 +48,33 @@
             'setting' => 'theme_logo',
             'section' => 'theme_header_area',
         )));
+
+        
+
+        // Menu Position Option 
+        $wp_customize->add_section('theme_menu_option',array(
+            'title' => __('Menu Position Option','themeTextDomain'),
+            'description' => 'If You Intersted to change your menu position you can do it+',
+        ));
+
+        $wp_customize->add_setting('theme_Menu_position',array(
+            'default'=>'right_menu',
+        ));
+
+        $wp_customize->add_control('theme_Menu_position',array(
+            'label' => 'menu Position',
+            'description' => 'Select Your Menu Position',
+            'setting' => 'theme_Menu_position',
+            'section' => 'theme_menu_option',
+            'type' => 'radio',
+            'choices' => array(
+                'left_menu' => 'Left Menu',
+                'right_menu' => 'Right Menu',
+                'center_menu' => 'Center Menu'
+            ),
+        ));
+
+
     }
     add_action('customize_register','theme_cusomizer_regester');
 
