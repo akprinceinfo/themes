@@ -19,20 +19,20 @@
 <body <?php body_class(); ?>>
     
     
-    <div id="header_area" class="<?php echo get_theme_mod('theme_Menu_position'); ?>">
+    <header id="header_area" class="<?php echo get_theme_mod('theme_Menu_position'); ?>">
         <div class="container">
             <div class="row">
                 <!-- logo area  -->
                 <div class="col-md-3 logo">
                     <!-- daynamick data -->
-                    <a href=""><img src="<?php echo get_theme_mod('theme_logo'); ?>" alt="" srcset=""></a>
+                    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_theme_mod('theme_logo'); ?>" alt="" srcset=""></a>
                     <!-- statect data  -->
                     <!-- <a href=""><img src="<?#php echo get_template_directory_uri(); ?>/img/logo.jpg" alt="" srcset=""></a> -->
                 </div>
                 <!-- nav area  -->
-                <div class="col-md-9">
+                <div class="col-md-9 <?php echo get_theme_mod('theme_color_setting'); ?>">
                     <!-- daynamick menu add -->
-                    <?php wp_nav_menu( array('theme_location'=>'mani_menu','menu_id'=>'nav') ); ?>
+                    <?php wp_nav_menu(array('theme_location'=>'mani_menu','menu_id'=>'nav') ); ?>
                     
                     <!-- <ul id="nav">
                         <li><a href="#">Home</a></li>
@@ -50,8 +50,21 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
+    <!-- =======================================
+          -----  Body Area -----
+    ======================================== -->
+
+    <section id="body_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <?php the_content(); ?>
+                </div>
+            </div>
+        </div>
+    </section>
     
 
 

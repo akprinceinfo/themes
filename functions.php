@@ -38,7 +38,7 @@
         // Header area function
         $wp_customize->add_section('theme_header_area',array(
             'title' => __('Header Area','themeTextDomain'),
-            'description'=> 'If you interested to update your header area, You can do it hear'
+            'description'=> 'If you interested to update your header area, You can do it hear',
         ));
         $wp_customize->add_setting('theme_logo',array(
             'default' => get_bloginfo('template_directory').'img/logo.jpg',
@@ -49,7 +49,7 @@
             'section' => 'theme_header_area',
         )));
 
-        
+
 
         // Menu Position Option 
         $wp_customize->add_section('theme_menu_option',array(
@@ -82,3 +82,31 @@
     // Menu Register
     register_nav_menu('mani_menu',__('Main Menu','themeTextDomain'));
   
+
+
+    // header nav text color change 
+
+    function theme_header_nav_color($wp_customize){
+        $wp_customize->add_section('theme_color_add',array(
+            'title' => __('Menu Color Option','themeTextDomain'),
+            'description'=> 'If you interested to update your color Name, You can do it hear',
+        ));
+
+        $wp_customize->add_setting('theme_color_setting',array(
+            'default'=>'blackColor',
+        ));
+        $wp_customize->add_control('theme_color_setting',array(
+            'label' => 'Menu Color',
+            'setting' => 'theme_color_setting',
+            'section' => 'theme_color_add',
+            'type' => 'radio',
+            'choices' => array(
+                'blackColor' => 'Default Color',
+                'redColor' => 'Red Color',
+                'yellowColor' => 'Yellow Color',
+                
+            ),
+        ));
+    }
+
+    add_action('customize_register','theme_header_nav_color');
