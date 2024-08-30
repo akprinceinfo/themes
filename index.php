@@ -19,7 +19,7 @@
                         ?>
                     <div class="blog_area">
                         <div class="post_thumb">
-                            <a href="the_permalink();"><?php  echo the_post_thumbnail('post-thumbnails') ?></a>
+                            <a href="the_permalink(); "><?php  echo the_post_thumbnail('post-thumbnails') ?></a>
                         </div>
                         <div class="post-detels">
                             <h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
