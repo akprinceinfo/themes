@@ -154,6 +154,32 @@ body {
     color: red !important;
   }
 
+
+  /*=======================================
+   Page_nav Area Style
+  ========================================*/
+
+  #page_nav .pages {
+    background: #ea1a70;
+    padding: 6px 6px;
+    color: #fff;
+  }
+  #page_nav .page-numbers {
+    background: #ea1a70;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  #page_nav .page-numbers.current {
+    background: rgb(0, 0, 0);
+  }
+  #page_nav .page-numbers:hover {
+    background: rgb(0, 0, 0);
+  }
+ 
+
+
  /*=======================================
    CopyRight Option
   ========================================*/

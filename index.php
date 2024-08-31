@@ -34,7 +34,19 @@
                                 _e('not Found');
                             endif;
                         ?>
-                    
+                    <div id="page_nav">
+                         <?php 
+                            if ('theme_pagenav') {
+                                theme_pagenav();
+                            }else{ ?>
+
+                            <?php next_post_link(); ?>
+                            <?php previous_post_link(); ?>
+
+                        <?php
+                            }
+                         ?>
+                    </div>
                 </div>
                 <div class="col-md-3">
                    <h2>This Is sidebar Area</h2>
